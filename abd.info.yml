@@ -1,9 +1,9 @@
 name: abd
 type: theme
-description: Theme based on <a href="http://emulsify.info">Emulsify</a>.
+description: Theme based on <a href="http://emulsify.info">Emulsify</a> by FourKitches.
 base theme: stable
 core: 8.x
-
+  
 # Libraries (These are loaded on every page. Use https://www.drupal.org/developing/api/8/assets#twig whenever possible.)
 libraries:
   - 'abd/global'

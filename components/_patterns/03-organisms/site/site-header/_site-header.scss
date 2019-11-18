@@ -1,1 +1,7 @@
 //  Empty
+header {
+  background-image: linear-gradient(white, transparent 25%), url('../../../images/corn/corn-field-440338_1920.jpg');
+  background-size: cover 100%;
+}
+.logo__img { max-width: 200px; }
+header .logo { display: inline-block; }

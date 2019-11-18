@@ -1,0 +1,26 @@
+diff --git a/node_modules/emulsify-gulp/index.js b/node_modules/emulsify-gulp/index.js
+index 6dd44a2..cb11a95 100644
+--- a/node_modules/emulsify-gulp/index.js
++++ b/node_modules/emulsify-gulp/index.js
+@@ -102,6 +102,10 @@ module.exports = (gulp, config) => {
+         injectChanges: true,
+         open: config.browserSync.openBrowserAtStart,
+         proxy: config.browserSync.domain,
++        https: {
++          key: "C:\\srv\\projects\\ABD\\abd_drupal\\config\\apache\\wildcard.notgoddess.com.key",
++          cert: "C:\\srv\\projects\\ABD\\abd_drupal\\config\\apache\\wildcard.notgoddess.com.crt"
++        },
+         startPath: config.browserSync.startPath,
+         ghostMode: config.browserSync.ghostMode
+       });
+@@ -122,7 +126,9 @@ module.exports = (gulp, config) => {
+     }
+     gulp.watch(config.paths.js, ['scripts']);
+     gulp.watch(`${config.paths.sass}/**/*.scss`, ['css']).on('change', (event) => {
+-      pa11y.pa11yTest(event.path, browserSync, config);
++      // temp windows path hack.
++      let eventpath = event.path.replace(/\\/g, "/");
++      pa11y.pa11yTest(eventpath, browserSync, config);
+     });
+     gulp.watch(config.patternLab.scssToYAML[0].src, ['pl:scss-to-yaml']);
+   });

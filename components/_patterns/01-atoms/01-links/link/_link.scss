@@ -1,6 +1,6 @@
 /// Link
-$color-link: $gray-darker;
-$color-link--hover: $gray-light;
+$color-link: $primary;
+$color-link--hover: $primary-variant;
 
 @mixin link {
   color: $color-link;
