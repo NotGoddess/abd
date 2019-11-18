@@ -1,6 +1,6 @@
 {
   "name": "abd",
-  "description": "Project template for Drupal 8 themes",
+  "description": "Drupal 8 theme",
   "version": "1.0.0",
   "devDependencies": {
     "emulsify-gulp": "^4.0.0",
